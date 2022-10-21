@@ -7,9 +7,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input string:");
         String inputStr = scanner.nextLine();
+        System.out.println("The result:");
         for (char currentChar : inputStr.toCharArray()
         ) {
-            System.out.print(currentChar + " ");
+            String binaryRepresent = String.format("%07d", Integer.parseInt(Integer.toBinaryString(currentChar)));
+            System.out.printf("%c = %s%n", currentChar, binaryRepresent);
         }
     }
+
 }
